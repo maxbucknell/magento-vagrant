@@ -34,7 +34,7 @@ def clean_up():
 def git_clone():
     """Clone a clean Magento installation into htdocs."""
     with lcd(project_root):
-        local('git clone git@bitbucket.org:redbox-digital/magento-ee.git htdocs')
+        local('git clone %s htdocs' %s config['magento_mirror'])
     with lcd(magento_root):
         local('git checkout "%s"' % config['magento_version'])
     local('/bin/rm -rf .git composer.json')

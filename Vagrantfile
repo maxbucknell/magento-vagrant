@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "10.3.118.121"
 
+  # Use host SSH key for authentication to Github, etc.
   config.ssh.forward_agent = true
 
   config.vm.provision "shell",

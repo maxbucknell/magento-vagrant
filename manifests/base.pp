@@ -78,16 +78,6 @@ package { 'php-mysql':
 
 
 /**
- * Xdebug is installed because this is a development server.
- */
-
-package { 'php-pecl-xdebug':
-  ensure => 'installed',
-  notify => Service['php-fpm'],
-}
-
-
-/**
  * For running PHP on Nginx
  */
 

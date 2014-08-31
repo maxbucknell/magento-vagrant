@@ -1,3 +1,18 @@
+
+
+/**
+ * Xdebug is installed because this is a development server.
+ */
+
+package { 'php-pecl-xdebug':
+  ensure => 'installed',
+  notify => Service['php-fpm'],
+}
+
+service { 'php-fpm':
+  ensure => 'running',
+}
+
 /**
  * Compass
  *
